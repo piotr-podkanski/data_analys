@@ -719,33 +719,34 @@ def generate_weight(body,diet):
     if body == "Healthy":
         #60 - 120
         #H majority 70 - 85 
-        #Cc
+        #Cc 60 - 70 big 70 - 90 big 
         #Np
         #Wl
         if diet == "H":
-            if chance <= 90: # 90/100 = 90% 60kg - 69kg 
+            if chance <= 25: # 25/100 = 25% 60kg - 69kg 
                 return random(60,70)
             
-            elif chance <= 97: #7/100 = 7% 75kg - 84kg
+            elif chance <= 75: #50/100 = 50% 75kg - 84kg
                 return random(75,85)
             
-            elif chance <= 97: #7/100 = 7% 85kg - 100kg
+            elif chance <= 97: #22/100 = 22% 85kg - 100kg
                 return random(85,100)
-            else: # 3/100 = 3% 106 - 120kg
+            
+            else: # 3/100 = 3% 106kg - 120kg
                 return random(100,121)
             
         if diet == "Cc":
-            if chance <= 32: # 35/100 = 32% 60kg - 74kg 
-                return random(60,75)
+            if chance <= 35: # 35/100 = 35% 60kg - 70kg 
+                return random(60,70)
             
-            elif chance <= 50: #15/100 = 18% 75kg - 89kg
-                return random(75,90)
+            elif chance <= 55: #20/100 =  20% 70kg - 79kg
+                return random(70,80)
             
-            elif chance <= 90: #40/100 = 40%% 90kg - 119kg
-                return random(90,120)
+            elif chance <= 90: #35/100 = 35% 80kg - 90kg
+                return random(80,91)
             
-            else: # 10/100 = 10% 120kg - 150kg
-                return random(120,151)
+            else: # 10/100 = 10% 91kg - 120kg
+                return random(91,120)
             
         if diet == "Np":
             if chance <= 23: # 23/100 = 23% 60kg - 74kg 
