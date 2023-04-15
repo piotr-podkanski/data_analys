@@ -437,7 +437,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 2/20 == 10%
-                return "Un"
+                return "Uh"
                       
         if body == "Healthy":
             if diet <= 7: # 7/20 = 35%
@@ -460,14 +460,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 5/20 = 25%
-                return "Un"
+                return "Uh"
             
             else: # 2/20 = 10%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 6: #6/20 = 30%
-                return "Un"
+                return "Uh"
             
             elif diet <= 13: #7/20 = 35%
                 return "Ff"
@@ -493,7 +493,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 1/20 == 5%
-                return "Un"
+                return "Uh"
         
         if body == "Healthy":
             if diet <= 11: # 11/20 = 55%
@@ -516,14 +516,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 19:# 3/20 = 15%
-                return "Un"
+                return "Uh"
             
             else: # 1/20 = 5%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 6: #6/20 = 30%
-                return "Un"
+                return "Uh"
             
             elif diet <= 10: #4/20 = 20%
                 return "Ff"
@@ -549,7 +549,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 1/20 == 5%
-                return "Un"
+                return "Uh"
         
         if body == "Healthy":
             if diet <= 8: # 8/20 = 40%
@@ -572,14 +572,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 4/20 = 20%
-                return "Un"
+                return "Uh"
             
             else: # 2/20 = 10%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 4: #4/20 = 20%
-                return "Un"
+                return "Uh"
             
             elif diet <= 9: #5/20 = 25%
                 return "Ff"
@@ -605,7 +605,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 3/20 == 15%
-                return "Un"
+                return "Uh"
         
         if body == "Healthy":
             if diet <= 6: # 6/20 = 30%
@@ -628,14 +628,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 4/20 = 25%
-                return "Un"
+                return "Uh"
             
             else: # 1/20 = 5%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 3: #3/20 = 15%
-                return "Un"
+                return "Uh"
             
             elif diet <= 6: #3/20 = 15%
                 return "Ff"
@@ -658,11 +658,127 @@ def generate_weight(body,diet):
     #Unhealthy- Un
     #Weight loss - Wl 
     #Ff - Fastfood
+    chance = random(100)+1
+    
     if body == "Athletic":
-        pass
+        if diet == "H":
+            if chance <= 90: # 90/100 = 90% 60kg - 89kg 
+                return random(60,89)
+            
+            elif chance <= 97: #7/100 = 7% 90kg - 105kg
+                return random(90,106)
+            
+            else: # 3/100 = 3% 106 - 120kg
+                return random(106,121)
+            
+        if diet == "Cc":
+            if chance <= 32: # 35/100 = 32% 60kg - 74kg 
+                return random(60,75)
+            
+            elif chance <= 50: #15/100 = 18% 75kg - 89kg
+                return random(75,90)
+            
+            elif chance <= 90: #40/100 = 40%% 90kg - 119kg
+                return random(90,120)
+            
+            else: # 10/100 = 10% 120kg - 150kg
+                return random(120,151)
+            
+        if diet == "Np":
+            if chance <= 23: # 23/100 = 23% 60kg - 74kg 
+                return random(60,75)
+            
+            elif chance <= 75: #52/100 = 52% 75kg - 89kg
+                return random(75,90)
+            
+            elif chance <= 88: #13/100 = 13% 90kg - 99kg
+                return random(90,100)
+            
+            elif chance <= 96: #8/100 = 8%% 100kg - 135kg
+                return random(100, 136)
+            
+            else: # 4/100 = 4% 135kg - 150kg
+                return random(135,151)
+            
+        if diet == "Un":
+            if chance <= 16: # 16/100 = 16% 60kg - 74kg 
+                return random(60,75)
+            
+            elif chance <= 44: #28/100 = 28% 75kg - 89kg
+                return random(75,90)
+            
+            elif chance <= 76: #32/100 = 32% 90kg - 104kg
+                return random(90,105)
+            
+            elif chance <= 93: #17/100 = 17% 105kg - 120kg
+                return random(105,121)
+            
+            else: # 7/100 = 7% 120kg - 150kg
+                return random(120,151)
     
     if body == "Healthy":
-        pass
+        #60 - 120
+        #H majority 70 - 85 
+        #Cc
+        #Np
+        #Wl
+        if diet == "H":
+            if chance <= 90: # 90/100 = 90% 60kg - 69kg 
+                return random(60,70)
+            
+            elif chance <= 97: #7/100 = 7% 75kg - 84kg
+                return random(75,85)
+            
+            elif chance <= 97: #7/100 = 7% 85kg - 100kg
+                return random(85,100)
+            else: # 3/100 = 3% 106 - 120kg
+                return random(100,121)
+            
+        if diet == "Cc":
+            if chance <= 32: # 35/100 = 32% 60kg - 74kg 
+                return random(60,75)
+            
+            elif chance <= 50: #15/100 = 18% 75kg - 89kg
+                return random(75,90)
+            
+            elif chance <= 90: #40/100 = 40%% 90kg - 119kg
+                return random(90,120)
+            
+            else: # 10/100 = 10% 120kg - 150kg
+                return random(120,151)
+            
+        if diet == "Np":
+            if chance <= 23: # 23/100 = 23% 60kg - 74kg 
+                return random(60,75)
+            
+            elif chance <= 75: #52/100 = 52% 75kg - 89kg
+                return random(75,90)
+            
+            elif chance <= 88: #13/100 = 13% 90kg - 99kg
+                return random(90,100)
+            
+            elif chance <= 96: #8/100 = 8%% 100kg - 135kg
+                return random(100, 136)
+            
+            else: # 4/100 = 12% 135kg - 150kg
+                return random(135,151)
+            
+        if diet == "Wl":
+            if chance <= 16: # 16/100 = 16% 60kg - 74kg 
+                return random(60,75)
+            
+            elif chance <= 44: #28/100 = 28% 75kg - 89kg
+                return random(75,90)
+            
+            elif chance <= 76: #32/100 = 32% 90kg - 104kg
+                return random(90,105)
+            
+            elif chance <= 93: #17/100 = 17% 105kg - 120kg
+                return random(105,121)
+            
+            else: # 7/100 = 7% 120kg - 150kg
+                return random(120,151)
+    
     
     if body == "Average":
         pass
@@ -672,7 +788,7 @@ def generate_weight(body,diet):
     
     
     
-    
+    return weight
 
 
 # Letar efter en fil och om den inte fins skapa och skriv
