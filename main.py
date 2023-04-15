@@ -101,14 +101,8 @@ def generare_body():
 def generate_time(age,body):
   #Timmar ska  vara max 21timmar minst 0 timmar i veckan 
     chance = random(1000)+1
-  
-#Athletic ska ha generelt mellan 
-  #0 - 2 - 2.5%
-  #3 - 6 - 7.5%
-  #11 - 14 - 20% 
-  #15 - 18 - 15%
-  #19 - 21 - 5%
-    if "At" in body:
+    
+    if body == "Athletic":
         if age > 0 and age <= 25:
             if chance <= 150: #150/1000 = 15%
                 return random(3)
@@ -147,7 +141,7 @@ def generate_time(age,body):
             else: #75/1000 = 7.5%
                 return random(19,22)
             
-        elif age >40 and age <50:
+        elif age >40 and age <=50:
             if chance <= 100: #100/1000 = 10%
                 return random(3)
             
@@ -165,44 +159,269 @@ def generate_time(age,body):
             
             else: #100/1000 = 10%
                 return random(19,22)
-            
-                
+                      
         else: #50+
-            pass
+            if chance <= 200: #200/1000 = 20%
+                return random(3)
+            
+            elif chance <= 300: #100/1000 = 10%
+                return random(3, 7)
+            
+            elif chance <= 635:#335/1000 = 33.5%
+                return random(7,11)
+            
+            elif chance <= 8:#225/1000 = 22.5%
+                return random(11,15)
+            
+            elif chance <= 960: #100/1000 = 10%
+                return random(15,19)
+            
+            else: #40/1000 = 4%
+                return random(19,22)
       
-#helthy
-  #0 - 2 - 10%
-  #3 - 6 - 20%
-  #7 - 10 - 50%
-  #11 - 14 - 25% 
-  #15 - 18 - 3%
-  #18 - 21 2%
-    if "He" in body:
-        pass
+    if body == "Healthy":
+        if age > 0 and age <= 25:
+            if chance <= 100: #100/1000 = 10%
+                return random(3)
+            
+            elif chance <= 300: #200/1000 = 20%
+                return random(3, 7)
+            
+            elif chance <= 700:#400/1000 = 40%
+                return random(7,11)
+            
+            elif chance <= 950:#250/1000 = 25%
+                return random(11,15)
+            
+            elif chance <= 980: #30/1000 = 3%
+                return random(15,19)
+            
+            else: #20/1000 = 2%
+                return random(19,22)
+        
+        elif age >25 and age <=40:
+            if chance <= 175: #200/1000 = 17.5%
+                return random(3)
+            
+            elif chance <= 350: #200/1000 = 17.5%
+                return random(3, 7)
+            
+            elif chance <= 700:#400/1000 = 35%
+                return random(7,11)
+            
+            elif chance <= 950:#250/1000 = 25%
+                return random(11,15)
+            
+            elif chance <= 980: #30/1000 = 3%
+                return random(15,19)
+            
+            else: #20/1000 = 2%
+                return random(19,22)
+            
+        elif age >40 and age <=50:
+            if chance <= 100: #100/1000 = 20%
+                return random(3)
+            
+            elif chance <= 300: #200/1000 = 20%
+                return random(3, 7)
+            
+            elif chance <= 525:#225/1000 = 20%
+                return random(7,11)
+            
+            elif chance <= 750:#225/1000 = 30%
+                return random(11,15)
+            
+            elif chance <= 900: #150/1000 = 5%
+                return random(15,19)
+            
+            else: #100/1000 = 5%
+                return random(19,22)
+                      
+        else: #50+
+            if chance <= 400: #400/1000 = 40%
+                return random(3)
+            
+            elif chance <= 500: #100/1000 = 10%
+                return random(3, 7)
+            
+            elif chance <= 700:#200/1000 = 20%
+                return random(7,11)
+            
+            elif chance <= 850:#150/1000 = 15%
+                return random(11,15)
+            
+            elif chance <= 992: #142/1000 = 14.2%
+                return random(15,19)
+            
+            else: #8/1000 = 0.8%
+                return random(19,22)
+            
+    if body == "Average":
+        if age > 0 and age <= 25:
+            if chance <= 700: #700/1000 = 70%
+                return random(3)
+            
+            elif chance <= 940: #240/1000 = 24%
+                return random(3, 7)
+            
+            elif chance <= 990:#50/1000 = 5%
+                return random(7,11)
+            
+            elif chance <= 995:#5/1000 = 0.5%
+                return random(11,15)
+            
+            elif chance <= 998: #3/1000 = 0.3%
+                return random(15,19)
+            
+            else: #2/1000 = 0.2%
+                return random(19,22)
+        
+        elif age >25 and age <=40:
+            if chance <= 600: #600/1000 = 60%
+                return random(3)
+            
+            elif chance <= 840: #240/1000 = 24%
+                return random(3, 7)
+            
+            elif chance <= 990:#150/1000 = 15%
+                return random(7,11)
+            
+            elif chance <= 995:#5/1000 = 0.5%
+                return random(11,15)
+            
+            elif chance <= 998: #3/1000 = 0.3%
+                return random(15,19)
+            
+            else: #20/1000 = 0.2%
+                return random(19,22)
+            
+        elif age >40 and age <=50:
+            if chance <= 550: #550/1000 = 55%
+                return random(3)
+            
+            elif chance <= 800: #250/1000 = 25%
+                return random(3, 7)
+            
+            elif chance <= 980:#180/1000 = 18%
+                return random(7,11)
+            
+            elif chance <= 988:#8/1000 = 0.8%
+                return random(11,15)
+            
+            elif chance <= 995: #7/1000 = 0.7%
+                return random(15,19)
+            
+            else: #5/1000 = 0.5%
+                return random(19,22)
+                      
+        else: #50+
+            if chance <= 400: #400/1000 = 40%
+                return random(3)
+            
+            elif chance <= 600: #200/1000 = 20%
+                return random(3, 7)
+            
+            elif chance <= 790:#190/1000 = 19%
+                return random(7,11)
+            
+            elif chance <= 890:#100/1000 = 10%
+                return random(11,15)
+            
+            elif chance <= 992: #102/1000 = 10,2%
+                return random(15,19)
+            
+            else: #8/1000 = 0.8%
+                return random(19,22)
       
-#average
-  #0 - 2 - 70%
-  #3 - 6 - 24%
-  #7 - 10 - 5%
-  #11 - 14 - 0.5% 
-  #15 - 18 - 0.3%
-  #18 - 21 - 0.2% 
-  
-    if "Av" in body:
-        pass
-#Unhealthy
-  #0 - 89%
-  #1 - 2 - 5%
-  #3 - 6 - 2.5%
-  #7 - 10 - 2%
-  #11 - 14 - 1% 
-  #15 - 18 - 0.4%
-  #18 - 21  0.1%
-    if "Un" in body:
-        pass
-# En funktion som bestämmer vilken diet personen har 
-    pass
-
+    if body == "Unhealthy":
+        if age > 0 and age <= 25:
+            if chance <= 890: #890/1000 = 89%
+                return 0
+            
+            elif chance <= 940: #50/1000 = 5%
+                return random(3)
+            
+            elif chance <= 965: #25/1000 = 2.5%
+                return random(3, 7)
+            
+            elif chance <= 985:#20/1000 = 2%
+                return random(7,11)
+            
+            elif chance <= 995:#10/1000 = 1%
+                return random(11,15)
+            
+            elif chance <= 999: #4/1000 = 0.4%
+                return random(15,19)
+            
+            else: #1/1000 = 0.1%
+                return random(19,22)
+        
+        elif age >25 and age <=40:
+            if chance <= 790: #790/1000 = 79%
+                return 0
+            
+            elif chance <= 890: #100/1000 = 10%
+                return random(3)
+            
+            elif chance <= 965: #75/1000 = 7.5%
+                return random(3, 7)
+            
+            elif chance <= 985:#20/1000 = 2%
+                return random(7,11)
+            
+            elif chance <= 995:#10/1000 = 1%
+                return random(11,15)
+            
+            elif chance <= 999: #4/1000 = 0.4%
+                return random(15,19)
+            
+            else: #1/1000 = 0.1%
+                return random(19,22)
+            
+        elif age >40 and age <=50:
+            if chance <= 630: #630/1000 = 63%
+                return 0
+            
+            elif chance <= 780: #150/1000 = 15%
+                return random(3)
+            
+            elif chance <= 890: #110/1000 = 11%
+                return random(3, 7)
+            
+            elif chance <= 960:#70/1000 = 7%
+                return random(7,11)
+            
+            elif chance <= 980:#20/1000 = 2%
+                return random(11,15)
+            
+            elif chance <= 996: #1.6/1000 = 1.6%
+                return random(15,19)
+            
+            else: #4/1000 = 0.4%
+                return random(19,22)
+                      
+        else: #50+
+            if chance <= 600: #600/1000 = 60%
+                return 0
+            
+            elif chance <= 750: #150/1000 = 15%
+                return random(3)
+            
+            elif chance <= 870: #120/1000 = 12%
+                return random(3, 7)
+            
+            elif chance <= 930:#60/1000 = 6%
+                return random(7,11)
+            
+            elif chance <= 970:#40/1000 = 4%
+                return random(11,15)
+            
+            elif chance <= 990: #20/1000 = 2%
+                return random(15,19)
+            
+            else: #10/1000 = 1%
+                return random(19,22) 
+      
 #en  funktion för ens diet 
 def generate_diet(age, body):
     diet = random(20) + 1  
@@ -218,7 +437,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 2/20 == 10%
-                return "Nc"
+                return "Un"
                       
         if body == "Healthy":
             if diet <= 7: # 7/20 = 35%
@@ -241,14 +460,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 5/20 = 25%
-                return "Nc"
+                return "Un"
             
             else: # 2/20 = 10%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 6: #6/20 = 30%
-                return "Nc"
+                return "Un"
             
             elif diet <= 13: #7/20 = 35%
                 return "Ff"
@@ -274,7 +493,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 1/20 == 5%
-                return "Nc"
+                return "Un"
         
         if body == "Healthy":
             if diet <= 11: # 11/20 = 55%
@@ -297,14 +516,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 19:# 3/20 = 15%
-                return "Nc"
+                return "Un"
             
             else: # 1/20 = 5%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 6: #6/20 = 30%
-                return "Nc"
+                return "Un"
             
             elif diet <= 10: #4/20 = 20%
                 return "Ff"
@@ -330,7 +549,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 1/20 == 5%
-                return "Nc"
+                return "Un"
         
         if body == "Healthy":
             if diet <= 8: # 8/20 = 40%
@@ -353,14 +572,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 4/20 = 20%
-                return "Nc"
+                return "Un"
             
             else: # 2/20 = 10%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 4: #4/20 = 20%
-                return "Nc"
+                return "Un"
             
             elif diet <= 9: #5/20 = 25%
                 return "Ff"
@@ -386,7 +605,7 @@ def generate_diet(age, body):
                 return "Np"          
             
             else: # 3/20 == 15%
-                return "Nc"
+                return "Un"
         
         if body == "Healthy":
             if diet <= 6: # 6/20 = 30%
@@ -409,14 +628,14 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 4/20 = 25%
-                return "Nc"
+                return "Un"
             
             else: # 1/20 = 5%
                 return "Ff"
             
         if body == "Unhealthy":
             if diet <= 3: #3/20 = 15%
-                return "Nc"
+                return "Un"
             
             elif diet <= 6: #3/20 = 15%
                 return "Ff"
@@ -431,9 +650,29 @@ def generate_diet(age, body):
                 return "wl"
                
 # En funktion för vikt för en peroson
+
 def generate_weight(body,diet):
-    weight = random(45,140)
-    return weight
+    #Healthy - H
+    #Counting calories - Cc
+    #No particular - Np
+    #Unhealthy- Un
+    #Weight loss - Wl 
+    #Ff - Fastfood
+    if body == "Athletic":
+        pass
+    
+    if body == "Healthy":
+        pass
+    
+    if body == "Average":
+        pass
+    
+    if body == "Unhealthy":
+        pass
+    
+    
+    
+    
 
 
 # Letar efter en fil och om den inte fins skapa och skriv
@@ -441,7 +680,7 @@ def generate_weight(body,diet):
 with codecs.open(os.path.join("data_analys","data_samling.csv"), encoding="utf-8",mode="w+") as file1:
     writer = csv.writer(file1)
     # Definerar första raden
-    writer.writerow(["kön", " lder", " vikt", " timar per vecka", " krops-typ", " diet"])   
+    writer.writerow(["Kön", " Ålder", " Vikt", " Timar/Vecka", " Krops-typ", " Diet"])   
     
     # Börjar generera värden för CSV
     for i in range(1000000):
@@ -452,10 +691,10 @@ with codecs.open(os.path.join("data_analys","data_samling.csv"), encoding="utf-8
         body = generare_body()
         time = generate_time(age, body)
         diet = generate_diet(age, body)
-        #weight = generate_weight()
+        weight = generate_weight(body,diet)
         print(i)
 
         # Skriver ner dassa värden
-        writer.writerow([sex, age, None, None, body, diet])
+        writer.writerow([sex, age, weight, time, body, diet])
   
 
