@@ -33,7 +33,7 @@ def generate_age():
     #61 - 70, 5%
     #71- 80, 2%
     
-    age = random(16,80) + 1
+    age = random(16, 80) + 1
     
     # För att få värden se meer naturliga ut så minskar jag värden lite slumpmessigt så att värde 70 fram kommer mer sällan än värde 20
     if age > 70:
@@ -41,14 +41,14 @@ def generate_age():
         if random(3) == 1:
             age -= random(21)
         else:
-            age -= random(21,41)
+            age -= random(21, 41)
             
     # Minskning för 60 år          
     elif age > 60:
         if random(3) == 1:
             age -= random(16)
         else:
-            age -= random(21,31)
+            age -= random(21, 31)
             
     # Minskning för 50 år           
     elif age > 50:
@@ -98,7 +98,7 @@ def generare_body():
     # Resultatet blir #Athletic = 12.5%. Healthy = 22.5%. Average = 36.875. Unhealthy = 28.125%.
    
 # En funktion som generear hur många timmar i veckan man tränar
-def generate_time(age,body):
+def generate_time(age, body):
   #Timmar ska  vara max 21timmar minst 0 timmar i veckan 
     chance = random(1000)+1
     
@@ -111,16 +111,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 650:#400/1000 = 40%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 800:#150/1000 = 15%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 950: #150/1000 = 15%
-                return random(15,19)
+                return random(15, 19)
             
             else: #50/1000 = 5%
-                return random(19,22)
+                return random(19, 22)
         
         elif age >25 and age <=40:
             if chance <= 225: #22.5/1000 = 22.5%
@@ -130,16 +130,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 650:#175/1000 = 17.5%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 800:#150/1000 = 15%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 925: #125/1000 = 12.5%
-                return random(15,19)
+                return random(15, 19)
             
             else: #75/1000 = 7.5%
-                return random(19,22)
+                return random(19, 22)
             
         elif age >40 and age <=50:
             if chance <= 100: #100/1000 = 10%
@@ -149,16 +149,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 525:#225/1000 = 22.5%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 750:#225/1000 = 22.5%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 900: #150/1000 = 15%
-                return random(15,19)
+                return random(15, 19)
             
             else: #100/1000 = 10%
-                return random(19,22)
+                return random(19, 22)
                       
         else: #50+
             if chance <= 200: #200/1000 = 20%
@@ -168,16 +168,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 635:#335/1000 = 33.5%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 8:#225/1000 = 22.5%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 960: #100/1000 = 10%
-                return random(15,19)
+                return random(15, 19)
             
             else: #40/1000 = 4%
-                return random(19,22)
+                return random(19, 22)
       
     if body == "Healthy":
         if age > 0 and age <= 25:
@@ -188,16 +188,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 700:#400/1000 = 40%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 950:#250/1000 = 25%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 980: #30/1000 = 3%
-                return random(15,19)
+                return random(15, 19)
             
             else: #20/1000 = 2%
-                return random(19,22)
+                return random(19, 22)
         
         elif age >25 and age <=40:
             if chance <= 175: #200/1000 = 17.5%
@@ -207,16 +207,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 700:#400/1000 = 35%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 950:#250/1000 = 25%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 980: #30/1000 = 3%
-                return random(15,19)
+                return random(15, 19)
             
             else: #20/1000 = 2%
-                return random(19,22)
+                return random(19, 22)
             
         elif age >40 and age <=50:
             if chance <= 100: #100/1000 = 20%
@@ -226,16 +226,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 525:#225/1000 = 20%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 750:#225/1000 = 30%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 900: #150/1000 = 5%
-                return random(15,19)
+                return random(15, 19)
             
             else: #100/1000 = 5%
-                return random(19,22)
+                return random(19, 22)
                       
         else: #50+
             if chance <= 400: #400/1000 = 40%
@@ -245,16 +245,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 700:#200/1000 = 20%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 850:#150/1000 = 15%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 992: #142/1000 = 14.2%
-                return random(15,19)
+                return random(15, 19)
             
             else: #8/1000 = 0.8%
-                return random(19,22)
+                return random(19, 22)
             
     if body == "Average":
         if age > 0 and age <= 25:
@@ -265,16 +265,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 990:#50/1000 = 5%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 995:#5/1000 = 0.5%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 998: #3/1000 = 0.3%
-                return random(15,19)
+                return random(15, 19)
             
             else: #2/1000 = 0.2%
-                return random(19,22)
+                return random(19, 22)
         
         elif age >25 and age <=40:
             if chance <= 600: #600/1000 = 60%
@@ -284,16 +284,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 990:#150/1000 = 15%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 995:#5/1000 = 0.5%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 998: #3/1000 = 0.3%
-                return random(15,19)
+                return random(15, 19)
             
             else: #20/1000 = 0.2%
-                return random(19,22)
+                return random(19, 22)
             
         elif age >40 and age <=50:
             if chance <= 550: #550/1000 = 55%
@@ -303,16 +303,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 980:#180/1000 = 18%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 988:#8/1000 = 0.8%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 995: #7/1000 = 0.7%
-                return random(15,19)
+                return random(15, 19)
             
             else: #5/1000 = 0.5%
-                return random(19,22)
+                return random(19, 22)
                       
         else: #50+
             if chance <= 400: #400/1000 = 40%
@@ -322,16 +322,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 790:#190/1000 = 19%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 890:#100/1000 = 10%
-                return random(11,15)
+                return random(11, 15)
             
-            elif chance <= 992: #102/1000 = 10,2%
-                return random(15,19)
+            elif chance <= 992: #102/1000 = 10.2%
+                return random(15, 19)
             
             else: #8/1000 = 0.8%
-                return random(19,22)
+                return random(19, 22)
       
     if body == "Unhealthy":
         if age > 0 and age <= 25:
@@ -345,16 +345,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 985:#20/1000 = 2%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 995:#10/1000 = 1%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 999: #4/1000 = 0.4%
-                return random(15,19)
+                return random(15, 19)
             
             else: #1/1000 = 0.1%
-                return random(19,22)
+                return random(19, 22)
         
         elif age >25 and age <=40:
             if chance <= 790: #790/1000 = 79%
@@ -367,16 +367,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 985:#20/1000 = 2%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 995:#10/1000 = 1%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 999: #4/1000 = 0.4%
-                return random(15,19)
+                return random(15, 19)
             
             else: #1/1000 = 0.1%
-                return random(19,22)
+                return random(19, 22)
             
         elif age >40 and age <=50:
             if chance <= 630: #630/1000 = 63%
@@ -389,16 +389,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 960:#70/1000 = 7%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 980:#20/1000 = 2%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 996: #1.6/1000 = 1.6%
-                return random(15,19)
+                return random(15, 19)
             
             else: #4/1000 = 0.4%
-                return random(19,22)
+                return random(19, 22)
                       
         else: #50+
             if chance <= 600: #600/1000 = 60%
@@ -411,16 +411,16 @@ def generate_time(age,body):
                 return random(3, 7)
             
             elif chance <= 930:#60/1000 = 6%
-                return random(7,11)
+                return random(7, 11)
             
             elif chance <= 970:#40/1000 = 4%
-                return random(11,15)
+                return random(11, 15)
             
             elif chance <= 990: #20/1000 = 2%
-                return random(15,19)
+                return random(15, 19)
             
             else: #10/1000 = 1%
-                return random(19,22) 
+                return random(19, 22) 
       
 #en  funktion för ens diet 
 def generate_diet(age, body):
@@ -651,7 +651,7 @@ def generate_diet(age, body):
                
 # En funktion för vikt för en peroson
 
-def generate_weight(body,diet):
+def generate_weight(body, diet):
     #Healthy - H
     #Counting calories - Cc
     #No particular - Np
@@ -663,122 +663,120 @@ def generate_weight(body,diet):
     if body == "Athletic":
         if diet == "H":
             if chance <= 90: # 90/100 = 90% 60kg - 89kg 
-                return random(60,89)
+                return random(60, 89)
             
             elif chance <= 97: #7/100 = 7% 90kg - 105kg
-                return random(90,106)
+                return random(90, 106)
             
             else: # 3/100 = 3% 106 - 120kg
-                return random(106,121)
+                return random(106, 121)
             
         if diet == "Cc":
             if chance <= 32: # 35/100 = 32% 60kg - 74kg 
-                return random(60,75)
+                return random(60, 75)
             
             elif chance <= 50: #15/100 = 18% 75kg - 89kg
-                return random(75,90)
+                return random(75, 90)
             
             elif chance <= 90: #40/100 = 40%% 90kg - 119kg
-                return random(90,120)
+                return random(90, 120)
             
             else: # 10/100 = 10% 120kg - 150kg
-                return random(120,151)
+                return random(120, 151)
             
         if diet == "Np":
             if chance <= 23: # 23/100 = 23% 60kg - 74kg 
-                return random(60,75)
+                return random(60, 75)
             
             elif chance <= 75: #52/100 = 52% 75kg - 89kg
-                return random(75,90)
+                return random(75, 90)
             
             elif chance <= 88: #13/100 = 13% 90kg - 99kg
-                return random(90,100)
+                return random(90, 100)
             
             elif chance <= 96: #8/100 = 8%% 100kg - 135kg
                 return random(100, 136)
             
             else: # 4/100 = 4% 135kg - 150kg
-                return random(135,151)
+                return random(135, 151)
             
         if diet == "Un":
             if chance <= 16: # 16/100 = 16% 60kg - 74kg 
-                return random(60,75)
+                return random(60, 75)
             
             elif chance <= 44: #28/100 = 28% 75kg - 89kg
-                return random(75,90)
+                return random(75, 90)
             
             elif chance <= 76: #32/100 = 32% 90kg - 104kg
-                return random(90,105)
+                return random(90, 105)
             
             elif chance <= 93: #17/100 = 17% 105kg - 120kg
-                return random(105,121)
+                return random(105, 121)
             
             else: # 7/100 = 7% 120kg - 150kg
-                return random(120,151)
+                return random(120, 151)
     
     if body == "Healthy":
-        #60 - 120
+
         #H majority 70 - 85 
         #Cc 60 - 70 big 70 - 90 big 
         #Np
         #Wl
         if diet == "H":
             if chance <= 25: # 25/100 = 25% 60kg - 69kg 
-                return random(60,70)
+                return random(60, 70)
             
             elif chance <= 75: #50/100 = 50% 75kg - 84kg
-                return random(75,85)
+                return random(75, 85)
             
             elif chance <= 97: #22/100 = 22% 85kg - 100kg
-                return random(85,100)
+                return random(85, 100)
             
             else: # 3/100 = 3% 106kg - 120kg
-                return random(100,121)
+                return random(100, 121)
             
         if diet == "Cc":
             if chance <= 35: # 35/100 = 35% 60kg - 70kg 
-                return random(60,70)
+                return random(60, 70)
             
             elif chance <= 55: #20/100 =  20% 70kg - 79kg
-                return random(70,80)
+                return random(70, 80)
             
             elif chance <= 90: #35/100 = 35% 80kg - 90kg
-                return random(80,91)
+                return random(80, 91)
             
             else: # 10/100 = 10% 91kg - 120kg
-                return random(91,120)
+                return random(91, 120)
             
         if diet == "Np":
-            if chance <= 23: # 23/100 = 23% 60kg - 74kg 
-                return random(60,75)
+            if chance <= 15: # 15/100 = 15% 60kg - 70kg 
+                return random(60, 70)
             
-            elif chance <= 75: #52/100 = 52% 75kg - 89kg
-                return random(75,90)
+            elif chance <= 54: #39/100 =  39% 70kg - 79kg
+                return random(70, 80)
             
-            elif chance <= 88: #13/100 = 13% 90kg - 99kg
-                return random(90,100)
+            elif chance <= 88: #34/100 = 34% 80kg - 90kg
+                return random(80, 91)
             
-            elif chance <= 96: #8/100 = 8%% 100kg - 135kg
-                return random(100, 136)
-            
-            else: # 4/100 = 12% 135kg - 150kg
-                return random(135,151)
+            else: # 12/100 = 12% 91kg - 120kg
+                return random(91, 120)
             
         if diet == "Wl":
-            if chance <= 16: # 16/100 = 16% 60kg - 74kg 
-                return random(60,75)
+            if chance <= 10: # 10/100 = 10% 60kg - 70kg 
+                return random(60, 70)
             
-            elif chance <= 44: #28/100 = 28% 75kg - 89kg
-                return random(75,90)
+            elif chance <= 35: #20/100 =  22% 70kg - 79kg
+                return random(70, 80)
             
-            elif chance <= 76: #32/100 = 32% 90kg - 104kg
-                return random(90,105)
+            elif chance <= 60: #25/100 = 27% 80kg - 90kg
+                return random(80, 91)
             
-            elif chance <= 93: #17/100 = 17% 105kg - 120kg
-                return random(105,121)
+            elif chance <= 80: #20/100 = 21% 90kg - 99kg
+                return random(90,100)
             
-            else: # 7/100 = 7% 120kg - 150kg
-                return random(120,151)
+            else: # 20/100 = 20% 91kg - 120kg
+                return random(100, 120)
+            
     
     
     if body == "Average":
@@ -794,7 +792,7 @@ def generate_weight(body,diet):
 
 # Letar efter en fil och om den inte fins skapa och skriv
 # Codecs används för att koda CSV med "åäö"
-with codecs.open(os.path.join("data_analys","data_samling.csv"), encoding="utf-8",mode="w+") as file1:
+with codecs.open(os.path.join("data_analys", "data_samling.csv"), encoding="utf-8", mode="w+") as file1:
     writer = csv.writer(file1)
     # Definerar första raden
     writer.writerow(["Kön", " Ålder", " Vikt", " Timar/Vecka", " Krops-typ", " Diet"])   
@@ -808,7 +806,7 @@ with codecs.open(os.path.join("data_analys","data_samling.csv"), encoding="utf-8
         body = generare_body()
         time = generate_time(age, body)
         diet = generate_diet(age, body)
-        weight = generate_weight(body,diet)
+        weight = generate_weight(body, diet)
         print(i)
 
         # Skriver ner dassa värden
