@@ -2,7 +2,6 @@
 # Codecs används föt att kunna öpna och koda CSV filen med svenska bokstäver
 import csv
 import os 
-import pandas as pd
 import numpy as np
 import codecs
 
