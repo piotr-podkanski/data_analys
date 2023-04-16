@@ -650,7 +650,6 @@ def generate_diet(age, body):
                 return "Wl"
                
 # En funktion för vikt för en peroson
-
 def generate_weight(body, diet):
     chance = random(100)+1
     
@@ -903,6 +902,18 @@ def generate_weight(body, diet):
             
             else: #8/100 = 30% 100 - 120 
                 return random(100, 121)
+
+# En funktion som genererar alla värden och returnerar en arrey
+def generate_values():
+    sex = generate_sex()
+    age = generate_age()
+    body = generare_body()
+    time = generate_time(age, body)
+    diet = generate_diet(age, body)
+    weight = generate_weight(body, diet)
+    
+    values = [sex, age, weight, time, body, diet] 
+    return values
     
 
 
@@ -914,18 +925,12 @@ with codecs.open(os.path.join("data_analys", "data_samling.csv"), encoding="utf-
     writer.writerow(["Kön", " Ålder", " Vikt", " Timar/Vecka", " Krops-typ", " Diet"])   
     
     # Börjar generera värden för CSV
-    for i in range(1000000):
-        
-        # Dessa värden genereras av dessa funktioner 
-        sex = generate_sex()
-        age = generate_age()
-        body = generare_body()
-        time = generate_time(age, body)
-        diet = generate_diet(age, body)
-        weight = generate_weight(body, diet)
-        print(i)
+    for i in range(10000):
 
-        # Skriver ner dassa värden
-        writer.writerow([sex, age, weight, time, body, diet])
+        # Skriver ner värden med hjälp av en funktion
+        writer.writerow(generate_values())
+        
+        # Printar en ciffra för varenda gång den har skrivit ner värden i en arrey    
+        print(i)
   
 
