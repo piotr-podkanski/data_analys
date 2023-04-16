@@ -1,9 +1,7 @@
 # Impotrtera moduler
 # Codecs används föt att kunna öpna och koda CSV filen med svenska bokstäver
-import csv
-import os 
 import numpy as np
-import codecs
+import csv, os, codecs
 
 # Sätter en specifik seed för att kunna jobba med samma slumpade värden varje gång
 # Kan komenteras ut
@@ -913,7 +911,6 @@ def generate_values():
     
     values = [sex, age, weight, time, body, diet] 
     return values
-    
 
 
 # Letar efter en fil och om den inte fins skapa och skriv
