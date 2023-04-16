@@ -476,10 +476,10 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 19: # 2/20 = 10%
-                return "np"
+                return "Np"
             
             else: # 1/20 = 5%
-                return "wl"
+                return "Wl"
                        
     elif age > 25 and age <= 35:
         if body == "Athletic":
@@ -532,10 +532,10 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 17: # 3/20 = 15%
-                return "np"
+                return "Np"
             
             else: # 3/20 = 15%
-                return "wl"
+                return "Wl"
               
     elif age > 35 and age <= 50:
         if body == "Athletic":
@@ -588,10 +588,10 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 17: # 5/20 = 35%
-                return "np"
+                return "Np"
             
             else: # 3/20 = 15%
-                return "wl"
+                return "Wl"
         
     elif age > 50:
         if body == "Athletic":
@@ -644,10 +644,10 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 15: # 5/20 = 25%
-                return "np"
+                return "Np"
             
             else: # 5/20 = 25%
-                return "wl"
+                return "Wl"
                
 # En funktion för vikt för en peroson
 
@@ -717,11 +717,6 @@ def generate_weight(body, diet):
                 return random(120, 151)
     
     if body == "Healthy":
-
-        #H majority 70 - 85 
-        #Cc 60 - 70 big 70 - 90 big 
-        #Np
-        #Wl
         if diet == "H":
             if chance <= 25: # 25/100 = 25% 60kg - 69kg 
                 return random(60, 70)
@@ -777,15 +772,147 @@ def generate_weight(body, diet):
             else: # 20/100 = 20% 91kg - 120kg
                 return random(100, 120)
             
-    
-    
-    if body == "Average":
-        pass
+    if body == "Average":     
+        if diet == "Np":
+            if chance <= 13: # 13/100 = 13% 50kg - 59kg 
+                return random(50, 60)
+            
+            elif chance <= 43: #30/100 = 30% 60kg - 69kg
+                return random(60, 70)
+            
+            elif chance <= 93: #50/100 = 50% 70kg - 89kg
+                return random(70, 90)
+            
+            else: # 7/100 = 7% 90kg - 105kg
+                return random(90, 106)
+            
+        if diet == "H":
+            if chance <= 22: # 22/100 = 22% 50kg - 59kg 
+                return random(50, 60)
+            
+            elif chance <= 71: #49/100 = 49% 60kg - 79kg
+                return random(60, 80)
+            
+            elif chance <= 95: #24/100 = 24% 80kg - 89kg
+                return random(80, 90)
+            
+            else: # 5/100 = 5% 90kg - 105kg
+                return random(90, 106)
+            
+        if diet == "Uh":
+            if chance <= 30: # 30/100 = 30% 50kg - 59kg 
+                return random(50, 60)
+            
+            elif chance <= 47: #17/100 = 17% 60kg - 79kg
+                return random(60, 70)
+            
+            elif chance <= 90: #43/100 = 43% 80kg - 89kg
+                return random(70, 90)
+            
+            else: # 10/100 = 10% 90kg - 105kg
+                return random(90, 106)
+            
+        if diet == "Ff":
+            if chance <= 12: # 10/100 = 12% 50kg - 59kg 
+                return random(50, 60)
+            
+            elif chance <= 37: #25/100 = 25% 60kg - 79kg
+                return random(60, 70)
+            
+            elif chance <= 87: #50/100 = 50% 80kg - 89kg
+                return random(70, 90)
+            
+            else: # 13/100 = 13% 90kg - 105kg
+                return random(90, 106)
+            
     
     if body == "Unhealthy":
-        pass
-    
-    
+        #40 - 120+
+        #Uh 90 
+        #Ff 90 120, 
+        #Cc between 40 - 50  some heigher 
+        #Np 80 - 90 lean 100 
+        #Wl 80 - 100 range but a lot on higher 
+        
+        if diet == "Uh":
+            if chance <= 11: # 11/100 = 11% 40kg - 59kg 
+                return random(40, 60)
+            
+            elif chance <= 26: #15/100 = 15% 60kg - 79kg
+                return random(60, 70)
+            
+            elif chance <= 71: #45/100 = 45% 80kg - 89kg
+                return random(70, 90)
+            
+            elif chance <= 94: # 23/100 = 23% 90kg - 109kg
+                return random(90, 110)
+            
+            else: #6/100 = 6% 110 - 120 
+                return random(110-121)
+            
+        if diet == "Ff":
+            if chance <= 5: # 5/100 = 5% 40kg - 59kg 
+                return random(40, 60)
+            
+            elif chance <= 15: #10/100 = 10% 60kg - 79kg
+                return random(60, 70)
+            
+            elif chance <= 60: #35/100 = 35% 80kg - 89kg
+                return random(70, 90)
+            
+            elif chance <= 86: # 36/100 = 36% 90kg - 109kg
+                return random(90, 110)
+            
+            else: #14/100 = 14% 110 - 120 
+                return random(110-121)
+            
+        if diet == "Cc":
+            if chance <= 40: # 40/100 = 30% 40kg - 49kg 
+                return random(40, 50)
+            
+            elif chance <= 70: #30/100 = 40% 50kg - 79kg
+                return random(50, 70)
+            
+            elif chance <= 84: #14/100 = 14% 80kg - 89kg
+                return random(70, 90)
+            
+            elif chance <= 94: # 10/100 = 10% 90kg - 109kg
+                return random(90, 110)
+            
+            else: #6/100 = 6% 110 - 120 
+                return random(110-121)
+            
+        if diet == "Np":
+            if chance <= 10: # 10/100 = 10% 40kg - 59kg 
+                return random(40, 60)
+            
+            elif chance <= 28: #18/100 = 18% 60kg - 79kg
+                return random(60, 70)
+            
+            elif chance <= 65: #37/100 = 37% 80kg - 89kg
+                return random(70, 90)
+            
+            elif chance <= 92: #27/100 = 27% 90kg - 109kg
+                return random(90, 110)
+            
+            else: #8/100 = 8% 110 - 120 
+                return random(110-121)
+            
+        if diet == "Wl":
+            if chance <= 10: # 10/100 = 10% 40kg - 59kg 
+                return random(40, 60)
+            
+            elif chance <= 28: #18/100 = 18% 60kg - 79kg
+                return random(60, 70)
+            
+            elif chance <= 65: #37/100 = 37% 80kg - 89kg
+                return random(70, 90)
+            
+            elif chance <= 92: #27/100 = 27% 90kg - 109kg
+                return random(90, 110)
+            
+            else: #8/100 = 8% 110 - 120 
+                return random(110-121)
     
     return weight
 
