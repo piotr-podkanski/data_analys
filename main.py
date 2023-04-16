@@ -841,7 +841,7 @@ def generate_weight(body, diet):
                 return random(90, 110)
             
             else: #6/100 = 6% 110 - 120 
-                return random(110-121)
+                return random(110, 121)
             
         if diet == "Ff":
             if chance <= 5: # 5/100 = 5% 40kg - 59kg 
@@ -857,7 +857,7 @@ def generate_weight(body, diet):
                 return random(90, 110)
             
             else: #14/100 = 14% 110 - 120 
-                return random(110-121)
+                return random(110, 121)
             
         if diet == "Cc":
             if chance <= 40: # 40/100 = 30% 40kg - 49kg 
@@ -873,7 +873,7 @@ def generate_weight(body, diet):
                 return random(90, 110)
             
             else: #6/100 = 6% 110 - 120 
-                return random(110-121)
+                return random(110, 121)
             
         if diet == "Np":
             if chance <= 10: # 10/100 = 10% 40kg - 49kg 
@@ -889,7 +889,7 @@ def generate_weight(body, diet):
                 return random(90, 110)
             
             else: #8/100 = 8% 110 - 120 
-                return random(110-121)
+                return random(110, 121)
             
         if diet == "Wl":
             if chance <= 12: # 12/100 = 12% 40kg - 59kg 
