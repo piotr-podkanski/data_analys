@@ -652,12 +652,6 @@ def generate_diet(age, body):
 # En funktion för vikt för en peroson
 
 def generate_weight(body, diet):
-    #Healthy - H
-    #Counting calories - Cc
-    #No particular - Np
-    #Unhealthy- Un
-    #Weight loss - Wl 
-    #Ff - Fastfood
     chance = random(100)+1
     
     if body == "Athletic":
@@ -824,8 +818,7 @@ def generate_weight(body, diet):
             
             else: # 13/100 = 13% 90kg - 105kg
                 return random(90, 106)
-            
-    
+               
     if body == "Unhealthy":
         #40 - 120+
         #Uh 90 
@@ -905,13 +898,12 @@ def generate_weight(body, diet):
             elif chance <= 35: #23/100 = 23% 60kg - 79kg
                 return random(60, 80)
             
-            elif chance <= 65: #35/100 = 35% 80kg - 99kg
+            elif chance <= 70: #35/100 = 35% 80kg - 99kg
                 return random(80, 100)
             
             else: #8/100 = 30% 100 - 120 
-                return random(100-121)
+                return random(100, 121)
     
-    return weight
 
 
 # Letar efter en fil och om den inte fins skapa och skriv
