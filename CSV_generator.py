@@ -20,17 +20,7 @@ def generate_sex():
     
 # En funktion som genererar hur gammal man är
 def generate_age():
-    
-    # Skapar värde mellan 16 och 80(år) 64år
-    #16 - 20, 10%
-    #21 - 30, 28%
-    #31 - 40, 26%
-    #41 - 50, 21%
-    #51 - 60, 8%
-    #61 - 70, 5%
-    #71- 80, 2%
-    
-    age = random(16, 80) + 1
+    age = random(15, 80) + 1
     
     # För att få värden se meer naturliga ut så minskar jag värden lite slumpmessigt så att värde 70 fram kommer mer sällan än värde 20
     if age > 70:
@@ -63,7 +53,7 @@ def generate_age():
     return age
     
 # En funktion som genererar vilken krops typ man har
-def generare_body():
+def generate_body():
     # Väljer 1 siffra mellan 0 och 3
     type_number = random(4) + 1
     
@@ -86,7 +76,7 @@ def generare_body():
         if random(8) <= 6:
             return "Average" # 7/8 av 25% = 21.875% 
         else:
-            return "unhealthy" # 1/8 av 25% = 3.125%
+            return "Unhealthy" # 1/8 av 25% = 3.125%
     
     # 25% medelsnit
     else:
@@ -431,7 +421,7 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 18:# 3/20 == 15%
-                return "Np"          
+                return "NP"          
             
             else: # 2/20 == 10%
                 return "Uh"
@@ -444,14 +434,14 @@ def generate_diet(age, body):
                 return 'Cc'
             
             elif diet <= 17:# 4/20 = 20%
-                return "np"
+                return "NP"
             
             else: # 3/20 = 15%
                 return "Wl"
         
         if body == "Average":
             if diet <= 10: # 10/20 = 50%
-                return "Np"
+                return "NP"
             
             elif diet <= 13: # 3/20 = 15%
                 return "H"
@@ -473,7 +463,7 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 19: # 2/20 = 10%
-                return "Np"
+                return "NP"
             
             else: # 1/20 = 5%
                 return "Wl"
@@ -487,7 +477,7 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 19:# 2/20 == 10%
-                return "Np"          
+                return "NP"          
             
             else: # 1/20 == 5%
                 return "Uh"
@@ -500,14 +490,14 @@ def generate_diet(age, body):
                 return 'Cc'
             
             elif diet <= 18:# 3/20 = 15%
-                return "np"
+                return "NP"
             
             else: # 2/20 = 10%
                 return "Wl"
                
         if body == "Average":
             if diet <= 12: # 12/20 = 60%
-                return "Np"
+                return "NP"
             
             elif diet <= 16: # 4/20 = 20%
                 return "H"
@@ -529,7 +519,7 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 17: # 3/20 = 15%
-                return "Np"
+                return "NP"
             
             else: # 3/20 = 15%
                 return "Wl"
@@ -543,7 +533,7 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 19:# 1/20 == 5%
-                return "Np"          
+                return "NP"          
             
             else: # 1/20 == 5%
                 return "Uh"
@@ -556,14 +546,14 @@ def generate_diet(age, body):
                 return 'Cc'
             
             elif diet <= 16:# 4/20 = 20%
-                return "np"
+                return "NP"
             
             else: # 4/20 = 20%
                 return "Wl"
                
         if body == "Average":
             if diet <= 9: # 9/20 = 45%
-                return "Np"
+                return "NP"
             
             elif diet <= 14: # 5/20 = 25%
                 return "H"
@@ -585,7 +575,7 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 17: # 5/20 = 35%
-                return "Np"
+                return "NP"
             
             else: # 3/20 = 15%
                 return "Wl"
@@ -599,7 +589,7 @@ def generate_diet(age, body):
                 return "H"
             
             elif diet <= 17:# 5/20 == 25%
-                return "Np"          
+                return "NP"          
             
             else: # 3/20 == 15%
                 return "Uh"
@@ -612,14 +602,14 @@ def generate_diet(age, body):
                 return 'Cc'
             
             elif diet <= 13:# 4/20 = 20%
-                return "np"
+                return "NP"
             
             else: # 7/20 = 35%
                 return "Wl"
                
         if body == "Average":
             if diet <= 7: # 7/20 = 35%
-                return "Np"
+                return "NP"
             
             elif diet <= 14: # 7/20 = 35%
                 return "H"
@@ -641,7 +631,7 @@ def generate_diet(age, body):
                 return "Cc"
             
             elif diet <= 15: # 5/20 = 25%
-                return "Np"
+                return "NP"
             
             else: # 5/20 = 25%
                 return "Wl"
@@ -674,7 +664,7 @@ def generate_weight(body, diet):
             else: # 10/100 = 10% 120kg - 150kg
                 return random(120, 151)
             
-        if diet == "Np":
+        if diet == "NP":
             if chance <= 23: # 23/100 = 23% 60kg - 74kg 
                 return random(60, 75)
             
@@ -690,7 +680,7 @@ def generate_weight(body, diet):
             else: # 4/100 = 4% 135kg - 150kg
                 return random(135, 151)
             
-        if diet == "Un":
+        if diet == "Uh":
             if chance <= 16: # 16/100 = 16% 60kg - 74kg 
                 return random(60, 75)
             
@@ -733,7 +723,7 @@ def generate_weight(body, diet):
             else: # 10/100 = 10% 91kg - 120kg
                 return random(91, 120)
             
-        if diet == "Np":
+        if diet == "NP":
             if chance <= 15: # 15/100 = 15% 60kg - 70kg 
                 return random(60, 70)
             
@@ -763,7 +753,7 @@ def generate_weight(body, diet):
                 return random(100, 120)
             
     if body == "Average":     
-        if diet == "Np":
+        if diet == "NP":
             if chance <= 13: # 13/100 = 13% 50kg - 59kg 
                 return random(50, 60)
             
@@ -871,7 +861,7 @@ def generate_weight(body, diet):
             else: #6/100 = 6% 110 - 120 
                 return random(110, 121)
             
-        if diet == "Np":
+        if diet == "NP":
             if chance <= 10: # 10/100 = 10% 40kg - 49kg 
                 return random(40, 50)
             
@@ -904,14 +894,13 @@ def generate_weight(body, diet):
 def generate_values():
     sex = generate_sex()
     age = generate_age()
-    body = generare_body()
+    body = generate_body()
     time = generate_time(age, body)
     diet = generate_diet(age, body)
     weight = generate_weight(body, diet)
     
     values = [sex, age, weight, time, body, diet] 
     return values
-
 
 # Letar efter en fil och om den inte fins skapa och skriv
 # Codecs används för att koda CSV med "åäö"
