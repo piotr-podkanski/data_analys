@@ -910,7 +910,7 @@ with codecs.open(os.path.join("data_analys", "data_samling.csv"), encoding="utf-
     writer.writerow(["Kön", " Ålder", " Vikt", " Timar/Vecka", " Krops-typ", " Diet"])   
     
     # Börjar generera värden för CSV
-    for i in range(10000):
+    for i in range(10000000):
 
         # Skriver ner värden med hjälp av en funktion
         writer.writerow(generate_values())
