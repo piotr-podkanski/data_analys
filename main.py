@@ -1,8 +1,7 @@
 import pandas as pd
 import numpy as np
 import PySimpleGUI as sg
-import pygame
-import os, codecs, time
+import pygame, os
 
 
 pygame.font.init()
@@ -21,7 +20,7 @@ class button():
         surface.fill(color)
         
         
-        #-------------------------------------------Visar up objecktet på skärmen---------------------------------------#
+        #------------------------------------Visar up objecktet på skärmen--------------------------------#
         def blit():
             # Om det fins en text som ska på så lägger den ut den. 
             if text != None:
@@ -38,7 +37,7 @@ class button():
             objects.append(self)
             window.blit(surface, rect_object) 
 
-        #---------------------------------------------funktion för knappen-------------------------------------#
+        #----------------------------------------funktion för knappen-------------------------------------#
         def process():
             # Kollar positionen av din mus
             mousePos = pygame.mouse.get_pos()
@@ -51,9 +50,14 @@ class button():
                 if True in pygame.mouse.get_pressed():
                     # I fall funktionen ska använda sig av ett specifikt värde
                     if button_value != -1:
+                        pygame.event.wait(1)
                         on_click(button_value)
                     else:
                         on_click
+                        
+                    # Eftersom att programmet är så snabbt, musen hinner inte registrera att du inte trycker på knappen
+                    # Det krävs en liten paus för detta så att programmet inte i några fall trycker på 2 knappar 
+                    pygame.event.wait(1)
                     
                         
         # Kör igenom dessa funktionerna varönda gång loopen går genom classen
@@ -63,8 +67,6 @@ class button():
 # En funktion för att ändra vilket fönster som ska användas
 def window_change(window_number):
     global win
-    
-    time.sleep(0.1)
 
     win = window_number
 
@@ -108,9 +110,9 @@ def start():
         pygame.display.update()
         clock.tick(20)
 
-#-------------------------------------------------------skapar alla fönster-------------------------------------------------#
 
-    
+#------------------------------------------------------skapar alla fönster--------------------------------------------------#
+
 def win0():
     global run
     global window_Size
@@ -155,11 +157,10 @@ def win2():
 
 
 
-
-
-
-
-
 # + startar PyGameLoopen och programme + #         
-start()
+# Read the CSV file
+gym_dataset= pd.read_csv(os.path.join("data_analys", "data_samling.csv"))
+
+# View the first 5 rows
+print(gym_dataset)
 
