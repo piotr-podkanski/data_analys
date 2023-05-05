@@ -907,7 +907,7 @@ def generate_values():
 with codecs.open(os.path.join("data_analys", "data_samling.csv"), encoding="utf-8", mode="w+") as file1:
     writer = csv.writer(file1)
     # Definerar första raden
-    writer.writerow(["Kön", " Ålder", " Vikt", " Timar/Vecka", " Krops-typ", " Diet"])   
+    writer.writerow(["Kön", "Ålder", "Vikt", "Timmar/Vecka", "Krops-typ", "Diet"])   
     
     # Börjar generera värden för CSV
     for i in range(10000000):
