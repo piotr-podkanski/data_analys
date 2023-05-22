@@ -57,7 +57,7 @@ class button():
 
         process() 
         blit()  
-
+#---------------------------------------------------------------------------------Funktioner-------------------------------------------------------------------------------------#
 #------------Funktion för att skriva text----------------------#
 def text(msg, x, y, font_size=30, color=(0,0,0), font_name=None):
     font = pygame.font.Font(font_name, font_size)
@@ -212,9 +212,7 @@ def starting_window():
     text('here you can choose what type of action you want to do', 30, 95 )
     
     text('Histogram plotting:', 40, 150 )
-    button(42, 182, 186, 76, (250,240,70), (200,190,60), 'Continue', window_change, 'histogram window', 35, (0,0,0))
-   
-    
+    button(42, 182, 186, 76, (250,240,70), (200,190,60), 'Continue', window_change, 'histogram window', 35, (0,0,0))   
              
 def histogram_window():
     global window_Size
@@ -237,8 +235,7 @@ def histogram_window():
     
     #-----------------Tillbaka knappen-----------------#
     button(1120, -10, 140, 60, (220,10,30), (180,8,25), 'Back', window_change, 'start', 30)
-    
-        
+            
 def multi_histogram_window():
     global window_Size
     
@@ -363,13 +360,10 @@ def multi_histogram_window():
     #-----------------Tillbaka knappen-----------------#
     button(1120, -10, 140, 60, (220,10,30), (180,8,25), 'Back', window_change, 'start', 30)
 
-
-
-#---------------------------------------------------------------------Pandas och Plotting-------------------------------------------------------------------------#
+#----------------------------------------------------------------------------Pandas och Plotting-----------------------------------------------------------------------------------#
 
 # Skapar en data frame
 gym_dataset = pd.read_csv(os.path.join('data_analys', 'data_samling.csv'))
-
 
 # En funktion som sparar din plot
 def saving():
@@ -391,8 +385,7 @@ def saving():
             plt.savefig(os.path.join('data_analys/images', 'mygraf'+str(i)+'.png'), dpi=500 )
 
             break
-    
-    
+        
 def multi_histogram_plotting(values):
     global save
     
@@ -478,7 +471,7 @@ def multi_histogram_plotting(values):
     
     plt.show()
     
-#--------------------------------------------------startar PyGameLoopen, därmed programmet---------------------------------------------------------#
+#-----------------------------------------------------------------------startar PyGameLoopen, därmed programmet------------------------------------------------------------------------#
 
 start()
 
