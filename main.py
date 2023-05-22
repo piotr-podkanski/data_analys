@@ -1,10 +1,8 @@
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import pygame
-import os, time
+import os
 
 pygame.init()
 pygame.font.init()
@@ -50,6 +48,7 @@ class button():
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         # Anropar klickhändelsen med det angivna knappvärdet
                         if button_value != -1:
+                            pygame.event.wait()
                             on_click(button_value)
                             # Anropar klickhändelsen utan knappvärde  
                         else:
@@ -81,7 +80,6 @@ def load_image(image_path, image_name, pos, resize=0, size=None):
     # Ritar bilden på skärmen på den angivna positionen
     window.blit(image, pos)
     
-
 #---- En funktion för att ändra vilket fönster som ska användas---#
 def window_change(window_number):
     global win
@@ -175,7 +173,7 @@ def start():
         
         for event in pygame.event.get():
             # I fall man trycker på korset så stänger programmet av sig
-            event = pygame.event.wait()
+            
             if event.type == pygame.QUIT:
                 run = False
             
@@ -296,13 +294,13 @@ def multi_histogram_window():
             elif i== 3:
                 what_value = value4
                 
-            # Hur frågan om värdet ska se ut om data_group är kön 
+            # Hur ska frågan ska se ut om data_group värdet är kön 
             if data_group == 'Kön':
                 button(50, 430 + (60*i), 60, 50, (255,0,127), (222,0,111), 'Man', return_value, ('value' + str(i+1), 'Man'))
                 button(120, 430 + (60*i), 90, 50, (255,0,127), (222,0,111), 'Kvinna', return_value, ('value' + str(i+1), 'Kvinna'))
                 text('your choice: ' + str(what_value), 220, 450+(60*i))
 
-            # Hur frågan om värdet ska se ut om data_group är Kropp
+            # Hur ska frågan ska se ut om data_group värdet är Kropp
             if data_group == 'Kropp':
                 button(50, 430 + (60*i), 110, 50, (255,0,127), (222,0,111), 'Athletic', return_value, ('value' + str(i+1), 'Athletic'))
                 button(170, 430 + (60*i), 110, 50, (255,0,127), (222,0,111), 'Average', return_value, ('value' + str(i+1), 'Average'))
